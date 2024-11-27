@@ -20,6 +20,8 @@ import CreaPost from './src/Pages/CreaPost'
 
 //importo PostPage
 import PostPage from './src/Pages/PostPage'
+
+//importo NotFound
 import NotFound from './src/Pages/NotFound'
 
 function App() {

@@ -1,0 +1,61 @@
+.card {
+    width: 600px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+
+
+    .cardTop {
+        background-color: #cccccc;
+        height: 400px;
+        font-size: 5rem;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 0 3px lightgrey;
+
+        img {
+            border-radius: 20px 20px 0 0;
+            object-fit: contain;
+        }
+    }
+
+    .cardBottom {
+        background-color: white;
+        padding: 0.75rem;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 0 3px lightgrey;
+    }
+}
+
+.dFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mt1 {
+    margin-top: 1rem;
+}
+
+.html {
+    color: red;
+}
+
+.css {
+    color: lightskyblue;
+}
+
+.js {
+    color: yellow;
+}
+
+.php {
+    color: lightsteelblue;
+}
+
+.deleteBtn {
+    background-color: rgb(238, 14, 14);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+}

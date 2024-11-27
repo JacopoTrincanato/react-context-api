@@ -1,0 +1,17 @@
+.checkContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+input[type="checkbox"] {
+    margin-left: 1rem;
+}
+
+.placeholder {
+    border-radius: 0.5rem;
+    width: 500px;
+    padding: 0.5rem;
+}

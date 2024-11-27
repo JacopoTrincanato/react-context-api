@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.fetchBtn {
+    background-color: rgb(14, 238, 14);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 2rem auto;
+    display: block;
+}

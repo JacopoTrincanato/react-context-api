@@ -52,6 +52,10 @@ header {
   }
 }
 
+main {
+  min-height: 70vh;
+}
+
 footer {
   text-align: center;
 }

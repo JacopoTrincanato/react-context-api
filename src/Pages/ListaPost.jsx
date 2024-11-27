@@ -69,7 +69,7 @@ export default function ListaPost() {
     return (
         <>
 
-            <button type='button' onClick={handleClick} className={style.fetchBtn}>Fetch Posts</button>
+            <button type='button' onClick={handleClick} className="fetchBtn">Fetch Posts</button>
 
             {Array.isArray(postsData) ? postsData.map((post, slug) => <div key={post.slug} className={style.card}>
 
@@ -100,7 +100,7 @@ export default function ListaPost() {
                     <Button />
 
                     {/* Pulsante per eliminare il post. Passa l'indice come dato tramite `data-index`. */}
-                    <button onClick={eliminate} className={style.deleteBtn}>
+                    <button onClick={eliminate} data-slug={post.slug} className={style.deleteBtn}>
                         <FontAwesomeIcon icon={faTrash} />
                     </button>
                 </div>

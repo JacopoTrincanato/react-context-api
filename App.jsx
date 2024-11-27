@@ -27,15 +27,17 @@ import NotFound from './src/Pages/NotFound'
 //importo PostContex
 import PostContex from './src/contexts/PostContex'
 
-import Card from './src/components/card/Card'
+import { useState } from 'react'
 
 function App() {
+
+  const [postsData, setPostsData] = useState([])
 
   return (
     <>
 
       {/*wrappo l'intera applicazione con il provider */}
-      <PostContex.Provider value={{ postCard: <Card /> }}>
+      <PostContex.Provider value={{ postsData, setPostsData }}>
         {/*uso BrowserRouter come container delle rotte*/}
         <BrowserRouter>
           {/*uso Routes per inserire le route singole e poterle gestire singolarmente*/}

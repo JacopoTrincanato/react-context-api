@@ -32,7 +32,8 @@ function App() {
   return (
     <>
 
-      <PostContex.Provider>
+      {/*wrappo l'intera applicazione con il provider */}
+      <PostContex.Provider value={{ post: <PostPage /> }}>
         {/*uso BrowserRouter come container delle rotte*/}
         <BrowserRouter>
           {/*uso Routes per inserire le route singole e poterle gestire singolarmente*/}
@@ -45,8 +46,6 @@ function App() {
               <Route path='/listapost/:slug' element={<PostPage />}></Route>
               <Route path='*' element={<NotFound />}></Route>
             </Route>
-
-
           </Routes>
         </BrowserRouter>
       </PostContex.Provider>

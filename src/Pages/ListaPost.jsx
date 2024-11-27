@@ -17,6 +17,8 @@ export default function ListaPost() {
 
     //consumo il context
     const { postCard } = useContext(PostContex)
+    console.log(postCard);
+
 
     //creo la funzione fetchData
     function fetchData(url = 'http://localhost:3002/posts') {
@@ -36,7 +38,7 @@ export default function ListaPost() {
     useEffect(fetchData, [])
 
     //creo una funzione per cancellare un post
-    /*function eliminate(e) {
+    function eliminate(e) {
 
         //Ottengo lo slug del post da eliminare dal pulsante associato
         const slug = e.target.getAttribute('data-slug')
@@ -58,7 +60,7 @@ export default function ListaPost() {
 
             })
 
-    }*/
+    }
 
     //eseguo il return
     return (
@@ -66,9 +68,9 @@ export default function ListaPost() {
 
             <button type='button' onClick={handleClick} className={style.fetchBtn}>Fetch Posts</button>
 
-            {/*Array.isArray(postsData) ? postsData.map((post, slug) => <Card key={post.slug} cardPost={post} eliminatePost={eliminate} cardSlug={post.slug}></Card>) : <p>Nessun risultato</p>*/}
+            {Array.isArray(postsData) ? postsData.map((post, slug) => <div key={post.slug} cardPost={post} eliminatePost={eliminate} cardSlug={post.slug}>{postCard}</div>) : <p>Nessun risultato</p>}
 
-            {Array.isArray(postsData) ? postsData.map(() => postCard) : <p>Nessun risultato</p>}
+            {/*Array.isArray(postsData) ? postsData.map(() => <div>{postCard}</div>) : <p>Nessun risultato</p>*/}
         </>
     )
 

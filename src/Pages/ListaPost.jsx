@@ -1,19 +1,18 @@
-//importo lo useState e useEffect
+//importo lo useEffect e useContext
 import { useEffect, useContext } from "react";
 
 //importo le icone di fontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
+//importo link
 import { Link } from "react-router-dom";
 
 //importo lo stile
-//import style from "../components/form/Form.module.css"
-
 import style from "../components/card/Card.module.css"
 
 //importo Button
 import Button from "../components/buttons/Button"
-//import Card from "../components/card/Card";
 
 //importo PostContex
 import PostContex from "../contexts/PostContex";
@@ -21,11 +20,8 @@ import PostContex from "../contexts/PostContex";
 //creo il componente Form
 export default function ListaPost() {
 
-    //const [postsData, setPostsData] = useState([])
-
     //consumo il context
     const { postsData, setPostsData } = useContext(PostContex)
-
 
     //creo la funzione fetchData
     function fetchData(url = 'http://localhost:3002/posts') {
@@ -111,9 +107,6 @@ export default function ListaPost() {
             </div>) : <p>Nessun risultato</p>
             }
 
-            {/*Array.isArray(postsData) ? postsData.map((post, slug) => <div key={post.slug} cardPost={post} eliminatePost={eliminate} cardSlug={post.slug}>{postCard}</div>) : <p>Nessun risultato</p>*/}
-
-            {/*Array.isArray(postsData) ? postsData.map(() => <div>{postCard}</div>) : <p>Nessun risultato</p>*/}
         </>
     )
 

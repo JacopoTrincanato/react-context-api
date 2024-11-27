@@ -36,26 +36,15 @@
     margin-top: 1rem;
 }
 
-.html {
-    color: red;
-}
-
-.css {
-    color: lightskyblue;
-}
-
-.js {
-    color: yellow;
-}
-
-.php {
-    color: lightsteelblue;
-}
-
 .deleteBtn {
     background-color: rgb(238, 14, 14);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
     margin-left: 1rem;
+}
+
+.w100 {
+    width: 400px;
+    display: block;
 }

@@ -20,7 +20,7 @@ export default function Card({ cardPost, cardSlug, eliminatePost }) {
                 <div className={style.card}>
                     <div className={`${style.cardTop} ${style.dFlex}`}>
                         {/* Immagine associata al post, con un testo alternativo generico. */}
-                        <Link to={`/listapost/${cardSlug}`}>
+                        <Link className={style.w100} to={`/listapost/${cardSlug}`}>
                             <img src={'http://localhost:3002/posts/../img/' + cardPost.image} alt="immagine" />
                         </Link>
 

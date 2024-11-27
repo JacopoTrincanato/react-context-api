@@ -75,7 +75,7 @@ export default function ListaPost() {
 
                 <div className={`${style.cardTop} ${style.dFlex}`}>
                     {/* Immagine associata al post, con un testo alternativo generico. */}
-                    <Link to={`/listapost/${post.slug}`}>
+                    <Link className="w100" to={`/listapost/${post.slug}`}>
                         <img src={'http://localhost:3002/posts/../img/' + post.image} alt="immagine" />
                     </Link>
 

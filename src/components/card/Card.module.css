@@ -26,12 +26,6 @@
     }
 }
 
-.dFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .mt1 {
     margin-top: 1rem;
 }
@@ -42,9 +36,4 @@
     border: none;
     border-radius: 0.5rem;
     margin-left: 1rem;
-}
-
-.w100 {
-    width: 400px;
-    display: block;
 }

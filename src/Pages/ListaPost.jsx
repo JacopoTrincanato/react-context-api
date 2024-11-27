@@ -1,12 +1,18 @@
 //importo lo useState e useEffect
 import { useEffect, useContext } from "react";
 
+//importo le icone di fontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 //importo lo stile
 //import style from "../components/form/Form.module.css"
 
 import style from "../components/card/Card.module.css"
 
-//importo la Card
+//importo Button
+import Button from "../components/buttons/Button"
 //import Card from "../components/card/Card";
 
 //importo PostContex
@@ -70,25 +76,38 @@ export default function ListaPost() {
             <button type='button' onClick={handleClick} className={style.fetchBtn}>Fetch Posts</button>
 
             {Array.isArray(postsData) ? postsData.map((post, slug) => <div key={post.slug} className={style.card}>
-                {/* Titolo del post */}
-                <h3 className={style.mt1}>{post.title}</h3>
-                {/* Contenuto del post */}
-                <p className={style.mt1}>{post.content}</p>
 
-                <p className={style.mt1}>
-                    {/* Mostra i tag associati al post. */}
-                    {Array.isArray(post.tags) && post.tags.map((tag, index) => (
-                        <span className={style[tag]} key={index}>
-                            {/* I tag sono separati da uno spazio, senza aggiungere uno alla fine. */}
-                            {tag}{index < post.tags.length - 1 ? ' ' : ''}
-                        </span>
-                    ))}
-                </p>
+                <div className={`${style.cardTop} ${style.dFlex}`}>
+                    {/* Immagine associata al post, con un testo alternativo generico. */}
+                    <Link to={`/listapost/${post.slug}`}>
+                        <img src={'http://localhost:3002/posts/../img/' + post.image} alt="immagine" />
+                    </Link>
 
-                {/* Pulsante per eliminare il post. Passa l'indice come dato tramite `data-index`. */}
-                <button onClick={eliminate} className={style.deleteBtn}>
-                    elimina
-                </button>
+                </div>
+
+                <div className={style.cardBottom}>
+                    {/* Titolo del post */}
+                    <h3 className={style.mt1}>{post.title}</h3>
+                    {/* Contenuto del post */}
+                    <p className={style.mt1}>{post.content}</p>
+
+                    <p className={style.mt1}>
+                        {/* Mostra i tag associati al post. */}
+                        {Array.isArray(post.tags) && post.tags.map((tag, index) => (
+                            <span className={style[tag]} key={index}>
+                                {/* I tag sono separati da uno spazio, senza aggiungere uno alla fine. */}
+                                {tag}{index < post.tags.length - 1 ? ' ' : ''}
+                            </span>
+                        ))}
+                    </p>
+                    {/* Componente Button) */}
+                    <Button />
+
+                    {/* Pulsante per eliminare il post. Passa l'indice come dato tramite `data-index`. */}
+                    <button onClick={eliminate} className={style.deleteBtn}>
+                        <FontAwesomeIcon icon={faTrash} />
+                    </button>
+                </div>
             </div>) : <p>Nessun risultato</p>
             }
 
